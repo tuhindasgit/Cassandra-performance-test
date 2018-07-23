@@ -41,7 +41,6 @@ public class UserController {
     @GetMapping(value = "/read/{id}") 
     public ResponseEntity<User> read(@PathVariable String id) {
         User user2 = userServiceImpl.readOne(id);
-        System.out.println("changes");
         return new ResponseEntity<User>(user2, HttpStatus.OK);
 
     }
